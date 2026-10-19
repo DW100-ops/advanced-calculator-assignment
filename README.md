@@ -11,3 +11,4 @@ An upgraded, production-grade web calculator built to practice modular JavaScrip
 ## Built With
 - HTML5 / CSS3 / Vanilla JavaScript
 - Git & GitHub for Version Control
+- Built for DevOps Web Dev Module
