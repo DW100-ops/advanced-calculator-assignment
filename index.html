@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production-Grade Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <div class="app-container">
+        <!-- Main Calculator Layout -->
+        <div class="calculator">
+            <div class="header">
+                <button id="theme-toggle" class="btn-text">☀️ Light Mode</button>
+            </div>
+            
+            <div class="display-container">
+                <div id="expression" class="expression-view"></div>
+                <input type="text" id="display" class="display-view" value="0" readonly>
+            </div>
+
+            <!-- Memory Register Row -->
+            <div class="button-row memory-row">
+                <button onclick="handleMemory('MC')" class="btn-mem">MC</button>
+                <button onclick="handleMemory('MR')" class="btn-mem">MR</button>
+                <button onclick="handleMemory('M+')" class="btn-mem">M+</button>
+                <button onclick="handleMemory('M-')" class="btn-mem">M-</button>
+            </div>
+
+            <!-- Main Button Grid -->
+            <div class="grid">
+                <button onclick="clearAll()" class="btn-control">C</button>
+                <button onclick="handleScientific('sqrt')" class="btn-sci">√</button>
+                <button onclick="handleScientific('pow')" class="btn-sci">x²</button>
+                <button onclick="handleOperator('/')" class="btn-op">÷</button>
+
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="handleOperator('*')" class="btn-op">×</button>
+
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="handleOperator('-')" class="btn-op">−</button>
+
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="handleOperator('+')" class="btn-op">+</button>
+
+                <button onclick="handleScientific('toggle-sign')">+/-</button>
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendNumber('.')">.</button>
+                <button onclick="handleScientific('percent')" class="btn-sci">%</button>
+            </div>
+            
+            <button onclick="calculate()" class="btn-equals">=</button>
+            <button id="toggle-history-btn" class="btn-text" style="margin-top: 15px; width: 100%;">View History Panel 📜</button>
+        </div>
+
+        <!-- Collapsible Side History Panel -->
+        <div id="history-panel" class="history-panel hidden">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <button onclick="clearHistory()" class="btn-clear-hist">Clear Logs</button>
+            </div>
+            <div id="history-list" class="history-list">
+                <p class="empty-msg">No recent calculations</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
