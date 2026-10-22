@@ -10,6 +10,7 @@ An upgraded, production-grade web calculator built to practice modular JavaScrip
 
 ## Built With
 - HTML5 / CSS3 / Vanilla JavaScript
+<<<<<<< HEAD
 - Git & GitHub for Version Control
 - Built for DevOps Web Dev Module
 
@@ -18,3 +19,6 @@ An upgraded, production-grade web calculator built to practice modular JavaScrip
 🚀 **Live Demo:** [https://dw100-ops.github.io/advanced-calculator-assignment/](https://dw100-ops.github.io/advanced-calculator-assignment/)
 
 An upgraded, production-grade web calculator built to practice modular JavaScript state management, robust error handling, and Git feature-branching workflows.
+=======
+- Git & GitHub for Version Controlcls
+>>>>>>> 1e59296 (docs: update readme documentation)
